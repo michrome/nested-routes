@@ -1,0 +1,16 @@
+{
+  "name": "example-nested-routes",
+  "dependencies": {
+    "nuxt": "latest"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "devDependencies": {
+    "prettier": "1.12.0",
+    "standard": "11.0.1"
+  }
+}

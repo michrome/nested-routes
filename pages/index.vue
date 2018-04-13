@@ -4,7 +4,7 @@
       <h2><nuxt-link to="/">Players</nuxt-link></h2>
       <ul class="players">
         <li v-for="user in users" :key="user.id">
-          <nuxt-link :to="'/'+user.id">{{ user.name }}</nuxt-link>
+          <nuxt-link :to="`/${user.id}/`">{{ user.name }}</nuxt-link>
         </li>
       </ul>
     </div>
@@ -17,19 +17,21 @@
 <script>
 export default {
   asyncData({ env }) {
-    return { users: env.users }
+    return { users: env.users };
   }
-}
+};
 </script>
 
 <style scoped>
-.page-enter-active, .page-leave-active {
-  transition: opacity .4s, transform .4s;
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.4s, transform 0.4s;
   transform-style: preserve-3d;
   backface-visibility: hidden;
   opacity: 1;
 }
-.page-enter, .page-leave-active {
+.page-enter,
+.page-leave-active {
   opacity: 0.5;
   transform: rotateY(100deg);
 }
